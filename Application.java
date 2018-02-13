@@ -15,7 +15,7 @@ public class Application extends JFrame{
             brush = new Brush(Color.YELLOW);
     }
 
-    void Run(){
+    void Render(){
         addMouseListener(new Click());
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
@@ -48,6 +48,6 @@ public class Application extends JFrame{
 
     public static void main(String [] args){
         Application paint = new Application();
-        paint.Run();
+        paint.Render();
     }
 }
