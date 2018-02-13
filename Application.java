@@ -26,10 +26,10 @@ public class Application extends JFrame{
 
         }
 
-        @Override
+       @Override
         public void mouseClicked(MouseEvent mouseEvent){
             if (brush == null)
-                brush = new Brush(getGraphics());
+                brush = new Brush(Color.YELLOW);
             brush.Draw(mouseEvent.getX(), mouseEvent.getY()); //Рисуем точку
         }
 
