@@ -5,7 +5,8 @@ public class Brush {
     Graphics point;
 
     Brush(Color colorOfCurve){
-        point.setColor(colorOfCurve);
+        this.point = point;
+        this.point.setColor(colorOfCurve);
     }
 
     public void Draw(int mouseX, int mouseY){
@@ -13,3 +14,4 @@ public class Brush {
         point.fillOval(mouseX, mouseY, 2, 2);
     }
 }
+
