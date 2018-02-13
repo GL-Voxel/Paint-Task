@@ -9,8 +9,10 @@ public class Application extends JFrame{
 
     Application() {
         super("ВЕЛОСИПЕД-ПЕИНТ");
-        brush = new Brush(Color.YELLOW);
         setBounds(0, 0, 2000, 800);
+        brush = new Brush();
+        if (brush == null)
+            brush = new Brush(Color.YELLOW);
     }
 
     void Run(){
@@ -26,10 +28,8 @@ public class Application extends JFrame{
 
         }
 
-       @Override
+        @Override
         public void mouseClicked(MouseEvent mouseEvent){
-            if (brush == null)
-                brush = new Brush(Color.YELLOW);
             brush.Draw(mouseEvent.getX(), mouseEvent.getY()); //Рисуем точку
         }
 
