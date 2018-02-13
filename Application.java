@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.Graphics;
 
 public class Application extends JFrame{
 
@@ -27,6 +28,8 @@ public class Application extends JFrame{
 
         @Override
         public void mouseClicked(MouseEvent mouseEvent){
+            if (brush == null)
+                brush = new Brush(getGraphics());
             brush.Draw(mouseEvent.getX(), mouseEvent.getY()); //Рисуем точку
         }
 
